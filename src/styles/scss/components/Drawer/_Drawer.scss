@@ -29,7 +29,9 @@
           flex: 1.7;
           box-shadow: 0 0 1rem #0f0e18;
           & > * {
-            color: #fff !important;
+            transition: filter .3s .3s;
+            filter: invert(1);
+
             & > * {
               letter-spacing: 8px;
               font-size: 2.5rem;
@@ -54,7 +56,6 @@
         &::before {
           content: '';
           position: absolute;
-
           background-color: #111;
           background-size: 300%;
           width: 100%;
@@ -63,6 +64,9 @@
           transition: all .3s;
         }
 
+        &:hover:before {
+          box-shadow: 0 0 5rem rgba(#000, .8);
+        }
 
         &:not(:nth-child(2)):hover:before {
           top: 0;
@@ -81,8 +85,6 @@
           transform: scale(1) skewY(0);
         }
 
-
-
         > * {
           display: flex;
           height: 100%;
@@ -91,11 +93,15 @@
           align-items: center;
           color: #222;
           letter-spacing: 2px;
-        }
 
+          > * {
+            width: 4rem;
+            height: 4rem;
+          }
+
+        }
       }
     }
-
   }
 }
 
@@ -105,7 +111,6 @@
   }
   50% {
     letter-spacing: 6px;
-
   }
   100% {
     letter-spacing: 2px;

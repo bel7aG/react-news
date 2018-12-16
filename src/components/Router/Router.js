@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { Main, Drawer, Home, Chapters, ContactMe, NotFound } from '../'
+import { Main, Drawer, Home, Study, ContactMe, NotFound } from '../'
 
 const Router = () => (
   <BrowserRouter>
@@ -9,7 +9,7 @@ const Router = () => (
       <Main>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/chapters" component={Chapters} />
+          <Route exact path="/study" component={Study} />
           <Route exact path="/contact" component={ContactMe} />
           <Route component={NotFound} />
         </Switch>

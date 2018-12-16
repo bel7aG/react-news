@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import HomeSVG from '../../assets/icons/house.svg'
 
 export default class Drawer extends Component {
   render() {
@@ -9,33 +10,18 @@ export default class Drawer extends Component {
           <ul className="list-items">
             <li className="list-item">
               <NavLink to="/">
-                <span>H</span>
-                <span>o</span>
-                <span>m</span>
-                <span>e</span>
+                <img src={HomeSVG} alt="" class="home-svg"/>
+
               </NavLink>
             </li>
             <li className="list-item">
-              <NavLink to="/chapters">
-                <span>C</span>
-                <span>h</span>
-                <span>a</span>
-                <span>p</span>
-                <span>t</span>
-                <span>e</span>
-                <span>r</span>
-                <span>s</span>
+              <NavLink to="/study">
+                Study
               </NavLink>
             </li>
             <li className="list-item">
               <NavLink to="/contact">
-                <span>C</span>
-                <span>o</span>
-                <span>n</span>
-                <span>t</span>
-                <span>a</span>
-                <span>c</span>
-                <span>t</span>
+                Contact
               </NavLink>
             </li>
           </ul>

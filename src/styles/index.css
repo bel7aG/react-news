@@ -53,7 +53,8 @@ a {
         flex: 1.7;
         box-shadow: 0 0 1rem #0f0e18; }
         .drawer .nav-box .list-item:hover > * {
-          color: #fff !important; }
+          transition: filter .3s .3s;
+          filter: invert(1); }
           .drawer .nav-box .list-item:hover > * > * {
             letter-spacing: 8px;
             font-size: 2.5rem;
@@ -67,6 +68,8 @@ a {
         height: 0;
         z-index: -1;
         transition: all .3s; }
+      .drawer .nav-box .list-item:hover:before {
+        box-shadow: 0 0 5rem rgba(0, 0, 0, 0.8); }
       .drawer .nav-box .list-item:not(:nth-child(2)):hover:before {
         top: 0;
         left: 0;
@@ -87,6 +90,9 @@ a {
         align-items: center;
         color: #222;
         letter-spacing: 2px; }
+        .drawer .nav-box .list-item > * > * {
+          width: 4rem;
+          height: 4rem; }
 
 @keyframes letterSpacing {
   0% {
