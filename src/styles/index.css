@@ -1,0 +1,30 @@
+/*  base  */
+* {
+  padding: 0;
+  margin: 0; }
+
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+/*  components  */
+.drawer {
+  position: relative;
+  height: 3rem; }
+  .drawer .nav-box {
+    height: 100%; }
+    .drawer .nav-box .list-items {
+      height: 100%;
+      display: flex; }
+    .drawer .nav-box .list-item {
+      flex: 1;
+      list-style-type: none; }
+      .drawer .nav-box .list-item > * {
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+
+.main {
+  height: calc(100vh - 6rem);
+  background-color: #333; }

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Router } from '../'
+
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        2019 from 0 to Hero
+        <Router />
       </div>
     );
   }
