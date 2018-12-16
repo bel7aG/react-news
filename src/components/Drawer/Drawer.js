@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import HomeSVG from '../../assets/icons/house.svg'
+import { HomeSVG, StudySVG, ContactSVG } from '../../assets/icons'
 
 export default class Drawer extends Component {
   render() {
@@ -11,17 +11,16 @@ export default class Drawer extends Component {
             <li className="list-item">
               <NavLink to="/">
                 <img src={HomeSVG} alt="" class="home-svg"/>
-
               </NavLink>
             </li>
             <li className="list-item">
               <NavLink to="/study">
-                Study
+                <img src={StudySVG} alt="" class="study-svg"/>
               </NavLink>
             </li>
             <li className="list-item">
               <NavLink to="/contact">
-                Contact
+                <img src={ContactSVG} alt="" class="contact-svg"/>
               </NavLink>
             </li>
           </ul>

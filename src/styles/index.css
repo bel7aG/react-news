@@ -33,6 +33,7 @@ a {
       list-style-type: none;
       position: relative;
       font-size: 2rem;
+      transition: all .4s;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -42,23 +43,19 @@ a {
       background-size: 300%;
       width: 100%;
       height: 100%;
-      transform: translate(0, 0) scale(1) skewY(0) skewX(0);
-      transition: transform 0.38s cubic-bezier(1, 1.9, 0, 1), width 0.58s cubic-bezier(1, 1.9, 0, 1);
-      animation: drawer-items 7s linear infinite; }
+      transform: translate(0, 0) scale(1) skewY(0) skewX(0); }
       .drawer .nav-box .list-item:not(:nth-child(3)) {
         border-right: 1px solid #1c1d1c; }
       .drawer .nav-box .list-item:hover {
         cursor: pointer;
-        transition: all .3s;
-        flex: 1.7;
+        transition: all .5s .5s;
+        flex: 2;
         box-shadow: 0 0 1rem #0f0e18; }
-        .drawer .nav-box .list-item:hover > * {
-          transition: filter .3s .3s;
-          filter: invert(1); }
-          .drawer .nav-box .list-item:hover > * > * {
-            letter-spacing: 8px;
-            font-size: 2.5rem;
-            animation: letterSpacing 1s infinite; }
+        .drawer .nav-box .list-item:hover > * > * {
+          filter: invert(1);
+          height: 6.8rem;
+          width: 6.8rem;
+          transition: all .26s .6s; }
       .drawer .nav-box .list-item::before {
         content: '';
         position: absolute;
@@ -91,16 +88,22 @@ a {
         color: #222;
         letter-spacing: 2px; }
         .drawer .nav-box .list-item > * > * {
+          filter: invert(0);
+          animation: filterIcons 1s  forwards infinite;
           width: 4rem;
           height: 4rem; }
 
-@keyframes letterSpacing {
+@keyframes filterIcons {
   0% {
-    letter-spacing: 2px; }
+    transform: rotate(0); }
+  25% {
+    transform: rotate(10deg); }
   50% {
-    letter-spacing: 6px; }
+    transform: rotate(-10deg); }
+  75% {
+    transform: rotate(10deg); }
   100% {
-    letter-spacing: 2px; } }
+    transform: rotate(0deg); } }
 
 .main {
   position: relative;
