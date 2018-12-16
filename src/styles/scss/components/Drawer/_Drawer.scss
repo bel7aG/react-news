@@ -1,27 +1,114 @@
 .drawer {
   position: relative;
-  height: 3rem;
+  height: 100vh;
 
   .nav-box {
-    height: 100%;
+    height: inherit;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     .list {
       &-items {
         height: 100%;
         display: flex;
+        background-color: #fff;
       }
+
       &-item {
         flex: 1;
         list-style-type: none;
-        > * {
+        position: relative;
+        font-size: 2rem;
+        &:not(:nth-child(3)) {
+          border-right: 1px solid rgb(28, 29, 28);
+        }
+        &:hover {
+          cursor: pointer;
+          transition: all .3s;
+          flex: 1.7;
+          box-shadow: 0 0 1rem #0f0e18;
+          & > * {
+            color: #fff !important;
+            & > * {
+              letter-spacing: 8px;
+              font-size: 2.5rem;
+              animation: letterSpacing 1s infinite;
+            }
+          }
+        }
+
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: fantasy;
+        background-size: 300%;
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 0) scale(1) skewY(0) skewX(0);
+        transition: transform .38s cubic-bezier(1, 1.9, 0, 1), width .58s cubic-bezier(1, 1.9, 0, 1) ;
+        animation: drawer-items 7s linear infinite;
+
+        &::before {
+          content: '';
+          position: absolute;
+
+          background-color: #111;
+          background-size: 300%;
+          width: 100%;
+          height: 0;
+          z-index: -1;
+          transition: all .3s;
+        }
+
+
+        &:not(:nth-child(2)):hover:before {
+          top: 0;
+          left: 0;
           height: 100%;
-          text-decoration: none;
+          transition: all .4s .3s;
+          transform: scale(1) skewY(0);
+        }
+
+
+        &:nth-child(2):hover:before {
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          transition: all .4s .3s;
+          transform: scale(1) skewY(0);
+        }
+
+
+
+        > * {
           display: flex;
+          height: 100%;
+          width: 100%;
           justify-content: center;
           align-items: center;
+          color: #222;
+          letter-spacing: 2px;
         }
+
       }
     }
+
+  }
+}
+
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: 2px;
+  }
+  50% {
+    letter-spacing: 6px;
+
+  }
+  100% {
+    letter-spacing: 2px;
 
   }
 }
