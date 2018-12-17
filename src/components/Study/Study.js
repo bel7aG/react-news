@@ -1,5 +1,5 @@
 import React from 'react'
-import { Component } from '..'
+import { Component } from '../'
 
 const chapters = [
   {boxContent: "Chapter: 1", url: "/react-one"},
@@ -32,7 +32,5 @@ const Study = (props) => {
     </div>
   )
 }
-
-
 
 export default Study
