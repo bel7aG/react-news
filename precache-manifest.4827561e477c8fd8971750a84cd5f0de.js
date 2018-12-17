@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/react-news/static/js/runtime~main.d652ad56.js"
   },
   {
-    "revision": "81efb90558ef0b52c720",
-    "url": "/react-news/static/js/main.81efb905.chunk.js"
+    "revision": "bcf058fe2292d2fe6a0c",
+    "url": "/react-news/static/js/main.bcf058fe.chunk.js"
   },
   {
-    "revision": "b9450ed27732e9af6a0e",
-    "url": "/react-news/static/js/1.b9450ed2.chunk.js"
+    "revision": "e88e185f6ecefa0b478d",
+    "url": "/react-news/static/js/1.e88e185f.chunk.js"
   },
   {
-    "revision": "81efb90558ef0b52c720",
-    "url": "/react-news/static/css/main.d5d5d91b.chunk.css"
+    "revision": "bcf058fe2292d2fe6a0c",
+    "url": "/react-news/static/css/main.2d9d30cc.chunk.css"
   },
   {
-    "revision": "c8c11110e1ad287d8774822d22947d72",
+    "revision": "6ac9ea746384056c10020913575030ef",
     "url": "/react-news/index.html"
   }
 ];
