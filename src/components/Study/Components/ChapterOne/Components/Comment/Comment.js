@@ -1,11 +1,12 @@
 import React from 'react'
+import faker from 'faker'
 
 const toDay = new Date().toLocaleDateString()
 
 const Comment = ({ name, text }) => (
   <div className="chapter comments">
     <a href="/" className="avatar">
-      <img src="" alt="avatar"/>
+      <img src={faker.image.cats()} style={{height: "6rem", width: "6rem"}} alt="avatar"/>
     </a>
     <div className="content">
       {name}
