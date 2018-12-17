@@ -1,37 +1,30 @@
 import React from 'react'
 import { Component } from '..'
 
-const Study = () => (
-  <div className="study">
-    <div className="grid">
-      <div className="grid-layout">
-        <Component
-          className="component--1"
-          content="Javascript"
-        />
-        <Component
-          className="component--2"
-          content="React"
-        />
-        <Component
-          className="component--3"
-          content="SASS"
-        />
-        <Component
-          className="component--4"
-          content="NodeJS"
-        />
-        <Component
-          className="component--5"
-          content="GraphQL"
-        />
-        <Component
-          className="component--6"
-          content="Python"
-        />
+const study = [
+  {boxContent: "Javascript", url: "/javascript"},
+  {boxContent: "React", url: "/react"},
+  {boxContent: "Sass", url: "/sass"},
+  {boxContent: "NodeJS", url: "/NodeJS"},
+  {boxContent: "GraphQL", url: "/graphQL"},
+  {boxContent: "Python", url: "/python"}
+]
+
+const Study = () => {
+  const chapters = study.map(({ boxContent, url }, index) =>
+    <Component key={boxContent} className={"item item--" + (index + 1)} content={boxContent} url={url} />)
+
+  return (
+    <div className="study">
+      <div className="grid">
+        <div className="grid-layout">
+          {chapters}
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
+
+
 
 export default Study

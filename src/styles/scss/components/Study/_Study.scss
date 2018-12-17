@@ -1,4 +1,54 @@
-.study {
-  height: inherit;
-  padding: 4rem 3rem;
+.main {
+  .study {
+    height: calc(100vh - 8.1rem);
+    padding: 4rem 3rem;
+
+    .grid {
+      height: 100%;
+
+      &-layout {
+        height: inherit;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem 1rem;
+
+        .item {
+          font-size: 2rem;
+          letter-spacing: 1px;
+          overflow-x: visible;
+          transition: all .1s;
+
+          &:hover {
+            transform: scale(1.04);
+          }
+
+          &--1 {
+            background-color: yellow;
+            color: #000;
+          }
+          &--2 {
+            background-color: lightblue;
+            color: #000;
+          }
+          &--3 {
+            background-color: lightpink;
+            color: #fff;
+          }
+          &--4 {
+            background-color: lightgreen;
+          }
+          &--5 {
+            background-color: purple;
+          }
+          &--6 {
+            background-color: blue;
+          }
+        }
+
+
+      }
+    }
+
+  }
 }
