@@ -125,38 +125,69 @@ a {
       display: grid;
       grid-template-rows: repeat(3, 1fr);
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 2rem 1rem; }
+      grid-gap: 3rem 2rem; }
       .main .study .grid-layout .item {
         font-size: 2rem;
         letter-spacing: 1px;
         overflow-x: visible;
-        transition: all .1s; }
+        transition: all .4s;
+        background-color: #fff;
+        border: 1px solid black;
+        opacity: .3;
+        border-radius: 8px; }
         .main .study .grid-layout .item:hover {
+          cursor: pointer;
+          opacity: 1;
           transform: scale(1.04); }
-        .main .study .grid-layout .item--1 {
-          background-color: yellow;
-          color: #000; }
-        .main .study .grid-layout .item--2 {
-          background-color: lightblue;
-          color: #000; }
-        .main .study .grid-layout .item--3 {
-          background-color: lightpink;
-          color: #fff; }
-        .main .study .grid-layout .item--4 {
-          background-color: lightgreen; }
-        .main .study .grid-layout .item--5 {
-          background-color: purple; }
-        .main .study .grid-layout .item--6 {
-          background-color: blue; }
+        .main .study .grid-layout .item > *, .main .study .grid-layout .item > * > * {
+          height: 100%;
+          width: 100%;
+          letter-spacing: 2px;
+          color: #444;
+          font-family: fantasy;
+          display: flex;
+          font-size: 2rem;
+          justify-content: center;
+          align-items: center;
+          transition: all .3s; }
+          .main .study .grid-layout .item > *:hover, .main .study .grid-layout .item > * > *:hover {
+            color: #222;
+            animation: chaptersContent 1s forwards infinite; }
+
+@keyframes chaptersContent {
+  0% {
+    letter-spacing: 2px; }
+  50% {
+    letter-spacing: 3px; }
+  100% {
+    letter-spacing: 2px; } }
 
 .main {
   padding: 4rem 0rem;
-  width: calc(100vw - 12rem);
   height: calc(100vh - 1px);
   margin: 0 auto;
   position: relative;
   z-index: 2;
   overflow-y: auto;
   box-shadow: 0px 0rem 13rem rgba(68, 68, 68, 0.2); }
+  .main > div, .main > * {
+    opacity: 1;
+    transform: scale(1);
+    animation-name: routePage;
+    animation-duration: 1s; }
+
+@keyframes routePage {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.4); }
+  60% {
+    opacity: 0.2;
+    transform: scale(0.3); }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
 
 /*    Layout    */

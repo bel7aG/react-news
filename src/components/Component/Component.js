@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Component = ({ className, content, url }) => {
+const Component = ({ classNameBox, classNameContent, content, url }) => {
 
   return (
-    <div className={className}>
-      <div className="component-content">
+    <div className={classNameBox}>
+      <div className={`${classNameContent}`}>
         <Link to={`/study${url}`}>{content}</Link>
       </div>
     </div>
