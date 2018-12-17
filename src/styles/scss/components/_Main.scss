@@ -1,7 +1,10 @@
 .main {
+  padding: 4rem 0rem;
+  width: calc(100vw - 12rem);
+  height: calc(100vh - 1px);
+  margin: 0 auto;
   position: relative;
-  background-color: #0f0e18;
-  > * {
-    height: calc(100vh - 4.5rem);
-  }
+  z-index: 2;
+  overflow-y: scroll;
+  box-shadow: 0px 0rem 13rem rgba(#444, .2);
 }

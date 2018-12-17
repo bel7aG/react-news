@@ -1,10 +1,9 @@
 .drawer {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 1px);
 
   .nav-box {
     height: inherit;
-    position: fixed;
     top: 0;
     width: 100%;
 
@@ -13,6 +12,7 @@
         height: 100%;
         display: flex;
         background-color: #fff;
+        border-bottom: 1px solid #111;
       }
 
       &-item {
@@ -26,13 +26,13 @@
         }
 
         &:hover {
+          z-index: 1000;
           cursor: pointer;
           transition: all .5s .5s;
           flex: 2;
           box-shadow: 0 0 1rem #0f0e18;
 
           & > * {
-
             & > * {
               filter: invert(1);
               height: 6.8rem;
@@ -51,16 +51,15 @@
         background-size: 300%;
         width: 100%;
         height: 100%;
-        transform: translate(0, 0) scale(1) skewY(0) skewX(0);
 
         &::before {
           content: '';
+          z-index: -1000;
           position: absolute;
-          background-color: #111;
+          background-color: #000;
           background-size: 300%;
           width: 100%;
           height: 0;
-          z-index: -1;
           transition: all .3s;
         }
 
@@ -75,7 +74,6 @@
           transition: all .4s .3s;
           transform: scale(1) skewY(0);
         }
-
 
         &:nth-child(2):hover:before {
           bottom: 0;
@@ -100,7 +98,6 @@
             width: 4rem;
             height: 4rem;
           }
-
         }
       }
     }

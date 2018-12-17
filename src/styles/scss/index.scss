@@ -3,10 +3,15 @@
 @import "base/typography";
 
    /*  components  */
-@import "components/Drawer/Drawer";
+ @import "components/Drawer/Drawer";
+@import "components/Study/Study";
+@import "components/Study/layout/StudyGrid";
+@import "components/Component";
 @import "components/ContactMe";
 @import "components/App";
 @import "components/Editor";
 @import "components/Home";
 @import "components/Main";
 @import "components/NotFound";
+
+    /*    Layout    */
