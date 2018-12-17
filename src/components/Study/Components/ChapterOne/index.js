@@ -1,3 +1,3 @@
-import ReactJS from './ReactJS'
+import ChapterOne from './ChapterOne'
 
-export default ReactJS
+export default ChapterOne

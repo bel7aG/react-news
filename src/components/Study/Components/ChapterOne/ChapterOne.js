@@ -1,9 +1,10 @@
 import React from 'react'
+import { Comment } from './Components'
 
-const ReactJS = () => (
+const ChapterOne = () => (
   <div className="react react-one">
-    <h1>This is First Chapter of ReactJS</h1>
+    <Comment name="Belhassen Gharsallah" text="this post it's so Cute."/>
   </div>
 )
 
-export default ReactJS
+export default ChapterOne
