@@ -6,7 +6,7 @@ const toDay = new Date().toLocaleDateString()
 const Comment = ({ name, text }) => (
   <div className="comment">
     <a href="/" className="avatar">
-      <img src={faker.image.cats()} style={{height: "6rem", width: "6rem"}} alt="avatar"/>
+      <img src={faker.image.image()} style={{height: "6rem", width: "6rem"}} alt="avatar"/>
     </a>
     <div className="content">
       {name}

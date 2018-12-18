@@ -1,17 +1,27 @@
 .main {
-  padding: 4rem 0rem;
+  padding: 4rem 0;
   height: calc(100vh - 1px);
+  width: calc(100vw - 8rem);
   margin: 0 auto;
   position: relative;
   z-index: 2;
   overflow-y: auto;
-  box-shadow: 0px 0rem 13rem rgba(#444, .2);
+  background-color: rgb(21, 1, 41);
+  box-shadow: 0 0 5.7rem rgba(#000, .79);
+
+  &:hover {
+
+  }
+
+  > div {
+    background-color: rgb(21, 1, 41);
+  }
 
   > div, > * {
-      opacity: 1;
-      transform: scale(1);
-      animation-name: routePage;
-      animation-duration: 1s;
+    opacity: 1;
+    transform: scale(1);
+    animation-name: routePage;
+    animation-duration: 1s;
   }
 
 }

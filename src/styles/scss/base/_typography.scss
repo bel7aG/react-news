@@ -1,10 +1,14 @@
+body {
+  background-color: rgb(21, 1, 41);
+  color: #fff;
+}
+
 ::-webkit-scrollbar {
-  width: 2px;
-  box-sizing: 0 0 4rem rgba(#000, 1);
-  background-color: #fff;
+  width: 6px;
+  background-color: rgb(21, 1, 41);
   max-height: 2rem !important;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #fff;
   border-radius: 7px;
 }
