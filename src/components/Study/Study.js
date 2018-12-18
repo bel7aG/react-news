@@ -1,5 +1,5 @@
 import React from 'react'
-import { Component } from '../'
+import { Component, Editor } from '../'
 
 const chapters = [
   {boxContent: "Chapter: 1", url: "/react-one"},
