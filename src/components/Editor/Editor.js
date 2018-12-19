@@ -9,12 +9,12 @@ import {
 const Editor = ({ code }) => (
   <div className="editor">
     <div className="editor-provider-box">
-      <LiveProvider className="editor-provider" code={code}>
+      <LiveProvider className="editor-provider" code={code} >
         <LiveEditor className="live-editor"/>
-        <div className="who">
+        {/* <div className="who">
           <LiveError className="editor-error" />
           <LivePreview className="preview"/>
-        </div>
+        </div> */}
       </LiveProvider>
     </div>
   </div>

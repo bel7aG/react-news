@@ -1,28 +1,51 @@
 .editor {
   min-width: 40rem;
-  padding: 4rem 8rem;
+
   .editor-provider {
-    display: grid;
     padding: 1rem 2rem;
     > * {
       width: 100%;
     }
 
     .live-editor {
-      min-height: 20rem;
+      min-height: 34rem;
       max-height: 50rem;
-      background-color: rgba(#FFF, .4);
-      border-radius: 5px;
+      box-shadow: inset 0 0 9rem #000;
+      border-radius: 9px;
       transition: all .2s;
-      font-size: 1.6rem;
+      font-size: 1.9rem;
       overflow: auto;
       transition: all .2s;
-      max-width: 80vw;
       margin: 0 auto;
-      min-width: 20rem;
+      min-width: 1rem;
+      max-width: 80vw;
+      margin-bottom: 3rem;
+      position: relative;
+      background-color: rgb(12, 2, 27);
       &:hover {
         transform: scale(.98);
+        transition: all .1s;
       }
+
+      &:focus {
+        background-color: rgba(255, 0, 0, 0.27);
+        transition: all .2s;
+      }
+
+
+    }
+    .who {
+      max-height: 50vh;
+      overflow: auto;
+      transition: all .2s;
+      border: 1px solid #fff;
+      max-width: 80vw;
+      margin: 0 auto;
+      &:hover {
+        transform: scale(.98);
+        box-shadow: inset 0 0 5rem rgba(#000, .8);
+      }
+
     }
   }
   &-error {
@@ -36,7 +59,5 @@
 }
 
 .preview {
-  min-height: 20rem;
-  max-height: 30rem;
-
+  max-height: 20rem;
 }
