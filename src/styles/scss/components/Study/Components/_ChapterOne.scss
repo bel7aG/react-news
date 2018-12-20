@@ -1,6 +1,6 @@
 .chapter {
   > .cards {
-    padding: 0 1rem;
+    padding: 4px 1rem;
     max-width: 80rem;
     margin: 0 auto;
     display: grid;
@@ -43,7 +43,6 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    min-height: 8rem;
     background-color: transparent;
     border-radius: 8px;
     border: 1px solid rgba(#fff, .1);
@@ -88,6 +87,44 @@
         }
         &:hover {
           background-color: rgba(251, 10, 10, 0.44);
+        }
+      }
+    }
+  }
+
+  .comment {
+    display: flex;
+    > * {
+      padding: 0 1rem;
+
+      &:first-child {
+        flex: 1;
+      }
+
+      &:not(:nth-child(1)) {
+        > * {
+          width: 100%;
+        }
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .name {
+          font-weight: 700;
+          font-family:monospace;
+          font-size: 2rem;
+          padding-bottom: 1rem;
+          letter-spacing: 1px;
+        }
+        .metadata {
+          font-style: italic;
+          font-size: 1.4rem;
+          color: rgba(255, 255, 255, 0.65);
+          text-align: right !important;
+        }
+        .text {
+          text-align: left;
         }
       }
     }
