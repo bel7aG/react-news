@@ -1,16 +1,16 @@
 {
-  "main.css": "/react-news/static/css/main.f82c6926.chunk.css",
-  "main.js": "/react-news/static/js/main.58a1f660.chunk.js",
-  "main.js.map": "/react-news/static/js/main.58a1f660.chunk.js.map",
+  "main.css": "/react-news/static/css/main.b6cd4497.chunk.css",
+  "main.js": "/react-news/static/js/main.bb70c613.chunk.js",
+  "main.js.map": "/react-news/static/js/main.bb70c613.chunk.js.map",
   "static/js/1.9ce8722d.chunk.js": "/react-news/static/js/1.9ce8722d.chunk.js",
   "static/js/1.9ce8722d.chunk.js.map": "/react-news/static/js/1.9ce8722d.chunk.js.map",
   "runtime~main.js": "/react-news/static/js/runtime~main.d652ad56.js",
   "runtime~main.js.map": "/react-news/static/js/runtime~main.d652ad56.js.map",
-  "static/css/main.f82c6926.chunk.css.map": "/react-news/static/css/main.f82c6926.chunk.css.map",
+  "static/css/main.b6cd4497.chunk.css.map": "/react-news/static/css/main.b6cd4497.chunk.css.map",
   "static/media/contact.svg": "/react-news/static/media/contact.901dc299.svg",
   "static/media/study.svg": "/react-news/static/media/study.38649ecd.svg",
   "static/media/home.svg": "/react-news/static/media/home.e0c7c3be.svg",
   "index.html": "/react-news/index.html",
-  "precache-manifest.1dab3925aa5cae8ad0741ea534095b43.js": "/react-news/precache-manifest.1dab3925aa5cae8ad0741ea534095b43.js",
+  "precache-manifest.65645ce151df7301d7085cdbfd6f6fe7.js": "/react-news/precache-manifest.65645ce151df7301d7085cdbfd6f6fe7.js",
   "service-worker.js": "/react-news/service-worker.js"
 }
