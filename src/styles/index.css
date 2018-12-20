@@ -283,7 +283,8 @@ body {
   z-index: 0; }
   .main > div {
     padding: 4rem 0;
-    z-index: 0; }
+    z-index: 0;
+    box-shadow: 0 0 -4rem black; }
   .main > div, .main > * {
     opacity: 1;
     transform: scale(1);

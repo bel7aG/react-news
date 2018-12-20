@@ -1,12 +1,9 @@
 import React from 'react'
-import faker from 'faker'
-import { CommentDetails } from '..'
 
-const ApprovalCard = (props) => {
-  console.log(props)
+const ApprovalCard = ({ children }) => {
   return (
     <div className="approval-card">
-      <CommentDetails image={faker.image.cats()} name={props.name} text={props.text} image={props.image} />
+      {children}
       <div className="btns">
         <button className="btn-approve">Approve</button>
         <button className="btn-rejected">rejected</button>

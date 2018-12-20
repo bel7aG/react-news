@@ -1,3 +1,5 @@
+const CodeOne = `
+// Chapter 1 Component:
 import React from 'react'
 import { ApprovalCard, CommentDetails } from './Components'
 import { Editor } from '../../../'
@@ -34,3 +36,52 @@ const ChapterOne = () => (
 )
 
 export default ChapterOne
+
+
+
+//ApprovalCard Component
+
+import React from 'react'
+
+const ApprovalCard = ({ children }) => {
+  return (
+    <div className="approval-card">
+      {children}
+      <div className="btns">
+        <button className="btn-approve">Approve</button>
+        <button className="btn-rejected">rejected</button>
+      </div>
+    </div>
+  )
+}
+
+export default ApprovalCard
+
+
+// CommentDatails Component*
+
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const toDay = new Date().toLocaleDateString()
+
+const CommentDetails = ({ name, text, image }) => (
+    <div className="comment">
+      <Link to="/study" className="avatar">
+        <img src={image} alt="avatar"/>
+      </Link>
+      <div className="content">
+        <div className="name">
+          {name}
+        </div>
+        <div className="metadata">
+          <span className="date">{toDay}</span>
+        </div>
+        <div className="text">{text}</div>
+      </div>
+    </div>
+)
+
+export default CommentDetails
+`;
+export default CodeOne

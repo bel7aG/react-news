@@ -2,8 +2,8 @@ import React from 'react'
 import {
   LiveProvider,
   LiveEditor,
-  LiveError,
-  LivePreview
+  // LiveError,
+  // LivePreview
 } from 'react-live'
 
 const Editor = ({ code }) => (
