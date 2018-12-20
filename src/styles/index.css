@@ -190,6 +190,10 @@ body {
   100% {
     transform: rotate(0); } }
 
+.chapter .comment > .avatar, .chapter .comment .avatar > img {
+  height: 7rem;
+  width: 7rem; }
+
 .editor {
   min-width: 40rem; }
   .editor .editor-provider {

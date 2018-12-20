@@ -3,6 +3,7 @@
 
   .editor-provider {
     padding: 1rem 2rem;
+
     > * {
       width: 100%;
     }
@@ -22,6 +23,7 @@
       margin-bottom: 3rem;
       position: relative;
       background-color: rgb(12, 2, 27);
+
       &:hover {
         transform: scale(.98);
         transition: all .1s;
@@ -31,8 +33,6 @@
         background-color: rgba(255, 0, 0, 0.27);
         transition: all .2s;
       }
-
-
     }
     .who {
       max-height: 50vh;
@@ -48,6 +48,7 @@
 
     }
   }
+
   &-error {
     color: #f52828;
     font-size: 2rem;

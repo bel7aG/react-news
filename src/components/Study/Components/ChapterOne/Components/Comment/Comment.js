@@ -1,13 +1,14 @@
 import React from 'react'
 import faker from 'faker'
+import { Link } from 'react-router-dom'
 
 const toDay = new Date().toLocaleDateString()
 
 const Comment = ({ name, text }) => (
-  <div className="comment">
-    <a href="/" className="avatar">
+  <div className="comment chapter-result">
+    <Link to="/study" className="avatar">
       <img src={faker.image.image()} style={{height: "6rem", width: "6rem"}} alt="avatar"/>
-    </a>
+    </Link>
     <div className="content">
       {name}
     </div>
