@@ -5,11 +5,28 @@ body {
 
 ::-webkit-scrollbar {
   width: 6px;
-  background-color: rgb(21, 1, 41);
+  animation-name: bar;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
   max-height: 2rem !important;
   height: 5px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 7px;
+}
+
+@keyframes bar {
+  0% {
+    background-color: rgba(255, 255, 255, 0.14);
+  }
+  50% {
+    background-color: red;
+
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.14);
+
+  }
 }

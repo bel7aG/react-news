@@ -1,3 +1,4 @@
-import Comment from './Comment'
+import CommentDetails from './CommentDetails'
+import ApprovalCard from './ApprovalCard'
 
-export { Comment }
+export { CommentDetails, ApprovalCard }
