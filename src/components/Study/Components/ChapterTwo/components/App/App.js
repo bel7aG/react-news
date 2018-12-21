@@ -5,30 +5,72 @@ export default class App extends Component {
     super(props)
 
     this.state = {
+      ready: true,
+      willUpdate: false,
       latitude: null,
-      isError: ''
+      isError: '',
+      ouch: false,
+      buttonText: 'click me'
     }
 
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log(position)
         this.setState(() => ({
           latitude: position.coords.latitude
         }))
       },
-      (error) => {
+      ({ message }) => {
         this.setState(() => ({
-          isError: `Sorry We can't get yout location sir`
+          isError: message
         }))
       }
     )
+    console.log('constructor')
+  }
 
+
+  componentDidMount() {
+    console.log('Mount')
+  }
+
+
+  componentWillUnmount() {
+    console.log('Unmount')
+  }
+
+  componentWillUpdate() {
+    console.log('componentWillUpdate')
+  }
+
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
+  }
+
+
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate')
+    return true
   }
 
   render() {
+    console.log('render')
     return (
       <div className="chapter-2__location">
-        {this.state.latitude ? `Latitude: ${this.state.latitude}` : `Error: ${this.state.isError}`}
+        <h1>
+          {this.state.latitude ?
+            `Latitude: ${this.state.latitude ? this.state.latitude : 'Location Unvailble'}` :
+            `Error: ${this.state.isError ? this.state.isError : 'Location Unavailble'}`}
+        </h1>
+        <button onClick={() => {
+          this.setState((prevState) => ({
+              ouch: !prevState.ouch
+          }))
+
+          this.setState((prevState) => ({
+            buttonText: prevState.buttonText === 'click me' ? 'ouch' : 'click me'
+          }))
+        }}>{this.state.buttonText}</button>
       </div>
     )
   }
