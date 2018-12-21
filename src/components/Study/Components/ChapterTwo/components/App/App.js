@@ -30,9 +30,12 @@ export default class App extends Component {
 
 
   componentDidMount() {
-    console.log('Mount')
+    console.log('Component Did Mount')
   }
 
+  componentWillMount() {
+    console.log('Component Will Mount')
+  }
 
   componentWillUnmount() {
     console.log('Unmount')
@@ -50,7 +53,8 @@ export default class App extends Component {
 
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate')
-    return true
+
+    return this.state.ready ? false : true
   }
 
   render() {
