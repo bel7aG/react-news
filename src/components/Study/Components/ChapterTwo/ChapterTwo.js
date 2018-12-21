@@ -1,8 +1,10 @@
 import React from 'react'
+import App, { SeasonDisplay } from './components'
 
 const ChapterTwo = () => (
-  <div className="react react-one">
-    <h1>This is First Chapter of ChapterTwo</h1>
+  <div className="chapter chapter-two">
+    <App />
+    <SeasonDisplay />
   </div>
 )
 
