@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 .season-display {
   color: #333;
   height: 50rem;
@@ -5,9 +6,15 @@
   margin: 0 auto;
   border-radius: 9px;
   position: relative;
-  background-image: linear-gradient(to right top, #0066ff, #7b88ff, #b0aeff, #dad5ff, #ffffff);
+  &-winter {
+    background-image: linear-gradient(to right top, #0016ff, #0063ff, #008cff, #00aeff, #3dcbfd);
+  }
+  &-summer {
+    background-image: linear-gradient(to right top, #ffbc00, #ffa200, #ff8700, #ff6900, #ff4512);
+  }
 
   > .season-title {
+    font-family: 'Bowlby One SC', cursive;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -25,15 +32,13 @@
     height: 7rem;
     width: 7rem;
     img {
-      height: inherit;
       width: inherit;
       filter: invert(.6);
     }
   }
 
   i:first-child {
-    top: -2rem;
-    background-color: red;
+    top: 0;
     left: 1rem;
   }
 

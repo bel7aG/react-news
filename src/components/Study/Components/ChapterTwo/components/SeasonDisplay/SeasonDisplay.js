@@ -1,6 +1,18 @@
 import React from 'react'
 import { Ambrella, Beach } from 'assets/icons'
 
+//best trick is:
+const seasonConfig = {
+  summer: {
+    clientSeason: `Where is my beach Baby`,
+    iconName: Beach
+  },
+  winter: {
+    clientSeason: `ouuuuuuuch it's chilly`,
+    iconName: Ambrella
+  }
+}
+
 const getSeason = (lat, month) =>
   month > 2 && month < 9 ?
   lat > 0 ? 'summer' : 'winter'
@@ -8,19 +20,21 @@ const getSeason = (lat, month) =>
 
 
 const SeasonDisplay = ({ latitude }) => {
-  const season = getSeason(latitude, new Date().getMonth());
-  const clientSeason = season === 'winter' ?
-    `ouuuuuuuch it's chilly` : `Where is my beach Baby`;
+  const season = getSeason(latitude, new Date().getMonth())
+  // const clientSeason = season === 'winter' ?
+  //   `ouuuuuuuch it's chilly` : `Where is my beach Baby`; // i can replace it with the an Object ahahaha
+
+  const { clientSeason, iconName } = seasonConfig[season]
 
   return (
-    <div className="season-display">
-      <h2>Season</h2>
+    <div className={`season-display season-display-${season}`}>
+      <h2>{season}</h2>
       <i>
-        <img src={Ambrella} alt={season}/>
+        <img src={iconName} alt={clientSeason}/>
       </i>
       <h1 className="season-title">{clientSeason}</h1>
       <i>
-        <img src={Ambrella} alt={season}/>
+        <img src={iconName} alt={clientSeason}/>
       </i>
     </div>
   )
