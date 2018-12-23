@@ -27,7 +27,7 @@ const SeasonDisplay = ({ latitude }) => {
   const { clientSeason, iconName } = seasonConfig[season]
 
   return (
-    <div className={`season-display season-display-${season}`}>
+    <div className={`season-display season-display-${season} in`}>
       <h2>{season}</h2>
       <i>
         <img src={iconName} alt={clientSeason}/>

@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 .season-display {
+  box-shadow: inset 0 0 17rem #150129;
   color: #333;
   height: 50rem;
   max-width: 90%;
   margin: 0 auto;
   border-radius: 9px;
   position: relative;
+
   &-winter {
     background-image: linear-gradient(to right top, #0016ff, #0063ff, #008cff, #00aeff, #3dcbfd);
   }

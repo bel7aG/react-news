@@ -1,5 +1,5 @@
 import React from 'react'
 
-const Spinner = () => <div className="spinner"><i><i>Loading</i></i></div>
+const Spinner = ({ message }) => <div className="spinner in"></div>
 
 export default Spinner

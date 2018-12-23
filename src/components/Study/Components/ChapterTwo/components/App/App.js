@@ -6,7 +6,6 @@ export default class App extends Component {
   state = {
     latitude: null,
     isError: '',
-    buttonText: 'click me'
   }
 
   componentDidMount() {
@@ -16,18 +15,8 @@ export default class App extends Component {
         this.setState(() => ({
           latitude: position.coords.latitude
         }))
-      }, 1000)
+      }, 2000)
       , ({message}) => this.setState(() => ({isError: message})))
-  }
-
-  clickMe = () => {
-    this.setState((prevState) => ({
-      ouch: !prevState.ouch
-    }))
-
-    this.setState((prevState) => ({
-      buttonText: prevState.buttonText === 'click me' ? 'ouch' : 'click me'
-    }))
   }
 
   render() {
@@ -40,6 +29,5 @@ export default class App extends Component {
     }
 
     return <Spinner />
-
   }
 }

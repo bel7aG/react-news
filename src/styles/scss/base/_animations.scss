@@ -1,0 +1,40 @@
+.in, .out {
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-duration: .5s;
+  background-color: rgba(132, 98, 246, 0.54);
+}
+
+.in {
+  animation-name: in;
+}
+
+.out {
+  animation-name: out;
+}
+
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .3;
+
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
