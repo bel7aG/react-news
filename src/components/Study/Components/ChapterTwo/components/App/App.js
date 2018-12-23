@@ -1,81 +1,45 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+import {SeasonDisplay} from '../'
+import { Spinner } from '../../../../../';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props)
+  state = {
+    latitude: null,
+    isError: '',
+    buttonText: 'click me'
+  }
 
-    this.state = {
-      ready: true,
-      willUpdate: false,
-      latitude: null,
-      isError: '',
-      ouch: false,
-      buttonText: 'click me'
-    }
-
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-      (position) => {
+      (position) =>
+      setTimeout(() => {
         this.setState(() => ({
           latitude: position.coords.latitude
         }))
-      },
-      ({ message }) => {
-        this.setState(() => ({
-          isError: message
-        }))
-      }
-    )
-    console.log('constructor')
+      }, 3000)
+      , ({message}) => this.setState(() => ({isError: message})))
   }
 
+  clickMe = () => {
+    this.setState((prevState) => ({
+      ouch: !prevState.ouch
+    }))
 
-  componentDidMount() {
-    console.log('Component Did Mount')
-  }
-
-  componentWillMount() {
-    console.log('Component Will Mount')
-  }
-
-  componentWillUnmount() {
-    console.log('Unmount')
-  }
-
-  componentWillUpdate() {
-    console.log('componentWillUpdate')
-  }
-
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate')
-  }
-
-
-  shouldComponentUpdate() {
-    console.log('shouldComponentUpdate')
-
-    return this.state.ready ? false : true
+    this.setState((prevState) => ({
+      buttonText: prevState.buttonText === 'click me' ? 'ouch' : 'click me'
+    }))
   }
 
   render() {
-    console.log('render')
-    return (
-      <div className="chapter-2__location">
-        <h1>
-          {this.state.latitude ?
-            `Latitude: ${this.state.latitude ? this.state.latitude : 'Location Unvailble'}` :
-            `Error: ${this.state.isError ? this.state.isError : 'Location Unavailble'}`}
-        </h1>
-        <button onClick={() => {
-          this.setState((prevState) => ({
-              ouch: !prevState.ouch
-          }))
+    if (this.state.isError && !this.state.latitude) {
+        return <div>Error: {this.state.isError}</div>
+    }
 
-          this.setState((prevState) => ({
-            buttonText: prevState.buttonText === 'click me' ? 'ouch' : 'click me'
-          }))
-        }}>{this.state.buttonText}</button>
-      </div>
-    )
+    if (!this.state.isError && this.state.latitude) {
+        return <SeasonDisplay latitude={this.state.latitude} />
+    }
+
+    return <Spinner />
+
   }
 }

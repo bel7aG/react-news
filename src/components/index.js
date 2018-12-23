@@ -8,6 +8,7 @@ import Home from './Home'
 import Main from './Main'
 import NotFound from './NotFound'
 import Router from './Router'
+import Spinner from './Spinner'
 
 export {
   App as default,
@@ -19,5 +20,6 @@ export {
   Home,
   Main,
   NotFound,
-  Router
+  Router,
+  Spinner
 }
