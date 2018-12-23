@@ -4,8 +4,6 @@
 
    /*  components  */
   @import "components/Drawer/Drawer";
-  @import "components/Study/Study";
-  @import "components/Study/Components/ChapterOne";
   @import "components/Component";
   @import "components/ContactMe";
   @import "components/App";
@@ -15,4 +13,7 @@
   @import "components/Main";
   @import "components/NotFound";
 
+  @import "components/Study/Study";
+  @import "components/Study/Components/ChapterOne";
+  @import "components/Study/Components/ChapterTwo";
     /*    Layout    */

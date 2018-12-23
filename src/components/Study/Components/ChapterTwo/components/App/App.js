@@ -16,7 +16,7 @@ export default class App extends Component {
         this.setState(() => ({
           latitude: position.coords.latitude
         }))
-      }, 3000)
+      }, 1000)
       , ({message}) => this.setState(() => ({isError: message})))
   }
 
@@ -32,11 +32,11 @@ export default class App extends Component {
 
   render() {
     if (this.state.isError && !this.state.latitude) {
-        return <div>Error: {this.state.isError}</div>
+      return <div>Error: {this.state.isError}</div>
     }
 
     if (!this.state.isError && this.state.latitude) {
-        return <SeasonDisplay latitude={this.state.latitude} />
+      return <SeasonDisplay latitude={this.state.latitude} />
     }
 
     return <Spinner />

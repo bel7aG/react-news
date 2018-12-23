@@ -131,6 +131,94 @@ body {
   100% {
     transform: rotate(0deg); } }
 
+.spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #150129; }
+  .spinner > i {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 3px dashed #fff;
+    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x; }
+    .spinner > i > i {
+      font-family: sans-serif;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center; }
+
+.editor .editor-provider {
+  width: 100%; }
+  .editor .editor-provider .live-editor {
+    min-height: 34rem;
+    max-height: 50rem;
+    box-shadow: inset 0 0 9rem #000;
+    border-radius: 9px;
+    transition: all .2s;
+    font-size: 1.9rem;
+    overflow: auto;
+    transition: all .2s;
+    padding: 4rem 5px;
+    margin: 0 auto;
+    max-width: 80vw;
+    margin-bottom: 3rem;
+    position: relative;
+    background-color: #0c021b; }
+    .editor .editor-provider .live-editor:hover {
+      transform: scale(0.98);
+      transition: all .1s; }
+    .editor .editor-provider .live-editor:focus {
+      background-color: rgba(0, 0, 0, 0.78);
+      transition: all .2s; }
+  .editor .editor-provider .who {
+    max-height: 50vh;
+    overflow: auto;
+    transition: all .2s;
+    border: 1px solid #fff;
+    max-width: 80vw;
+    margin: 0 auto; }
+    .editor .editor-provider .who:hover {
+      transform: scale(0.98);
+      box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.8); }
+
+.editor-error {
+  color: #f52828;
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center; }
+
+.preview {
+  max-height: 20rem; }
+
+.main {
+  height: calc(100vh - 1px);
+  width: calc(100vw - 4rem);
+  margin: 0 auto;
+  background-color: #150129;
+  box-shadow: 0 0 4rem black;
+  overflow: auto;
+  z-index: 0; }
+  .main > div {
+    padding: 4rem 0;
+    z-index: 0;
+    box-shadow: 0 0 -4rem black; }
+  .main > div, .main > * {
+    opacity: 1;
+    transform: scale(1);
+    animation-name: routePage;
+    animation-duration: 1s; }
+
 .main .study {
   height: calc(100vh - 8.1rem);
   padding: 2rem 3rem;
@@ -296,92 +384,37 @@ body {
       .chapter .comment > *:not(:nth-child(1)) .text {
         text-align: left; }
 
-.spinner {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #150129; }
-  .spinner > i {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-    border: 3px dashed #fff;
-    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
-    background-position: bottom;
-    background-size: 3px 1px;
-    background-repeat: repeat-x; }
-    .spinner > i > i {
-      font-family: sans-serif;
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      align-items: center; }
-
-.editor .editor-provider {
-  width: 100%; }
-  .editor .editor-provider .live-editor {
-    min-height: 34rem;
-    max-height: 50rem;
-    box-shadow: inset 0 0 9rem #000;
-    border-radius: 9px;
-    transition: all .2s;
-    font-size: 1.9rem;
-    overflow: auto;
-    transition: all .2s;
-    padding: 4rem 5px;
-    margin: 0 auto;
-    max-width: 80vw;
-    margin-bottom: 3rem;
-    position: relative;
-    background-color: #0c021b; }
-    .editor .editor-provider .live-editor:hover {
-      transform: scale(0.98);
-      transition: all .1s; }
-    .editor .editor-provider .live-editor:focus {
-      background-color: rgba(0, 0, 0, 0.78);
-      transition: all .2s; }
-  .editor .editor-provider .who {
-    max-height: 50vh;
-    overflow: auto;
-    transition: all .2s;
-    border: 1px solid #fff;
-    max-width: 80vw;
-    margin: 0 auto; }
-    .editor .editor-provider .who:hover {
-      transform: scale(0.98);
-      box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.8); }
-
-.editor-error {
-  color: #f52828;
-  font-size: 2rem;
-  padding: 1rem 0;
-  text-align: center; }
-
-.preview {
-  max-height: 20rem; }
-
-.main {
-  height: calc(100vh - 1px);
-  width: calc(100vw - 4rem);
+.season-display {
+  color: #333;
+  height: 50rem;
+  max-width: 90%;
   margin: 0 auto;
-  background-color: #150129;
-  box-shadow: 0 0 4rem black;
-  overflow: auto;
-  z-index: 0; }
-  .main > div {
-    padding: 4rem 0;
-    z-index: 0;
-    box-shadow: 0 0 -4rem black; }
-  .main > div, .main > * {
-    opacity: 1;
-    transform: scale(1);
-    animation-name: routePage;
-    animation-duration: 1s; }
+  border-radius: 9px;
+  position: relative;
+  background-image: linear-gradient(to right top, #0066ff, #7b88ff, #b0aeff, #dad5ff, #ffffff); }
+  .season-display > .season-title {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .season-display h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: sans-serif; }
+  .season-display i {
+    position: absolute;
+    height: 7rem;
+    width: 7rem; }
+    .season-display i img {
+      height: inherit;
+      width: inherit;
+      filter: invert(0.6); }
+  .season-display i:first-child {
+    top: -2rem;
+    background-color: red;
+    left: 1rem; }
+  .season-display i:last-child {
+    bottom: 0;
+    right: 1rem; }
 
 /*    Layout    */

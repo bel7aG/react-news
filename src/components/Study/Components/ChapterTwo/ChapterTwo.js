@@ -3,9 +3,8 @@ import App, { SeasonDisplay } from './components'
 import { Editor } from '../../../'
 const ChapterTwo = () => (
   <div className="chapter chapter-two">
-    <Editor />  
+    <Editor />
     <App />
-    <SeasonDisplay />
   </div>
 )
 
